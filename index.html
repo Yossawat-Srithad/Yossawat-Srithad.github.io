@@ -1,68 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @keyframes textMove {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-10px);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        .animated-text {
-            font-size: 2rem;
-            font-weight: bold;
-            display: inline-block;
-            animation: textMove 2s infinite ease-in-out;
-            color: #FF6347; 
-        }
-        .animated-char {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease-out;
-        }
-
-        .animated-char.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <title>Resume/Portfolio ของ [ใส่ชื่อของคุณ]</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1 class="animated-text">My Name is Yossawat Srithad</H1>
-    <br>
-    <h2 id="animated-text">Fist Page From Github</h2>
-    <br>
-    <a href="https://hosting.udru.ac.th/it66040233146/website/homepage.html">Website</a>
-    <script>
-        const textElement = document.getElementById("animated-text");
-        const text = textElement.textContent;
-        textElement.textContent = "";
 
-        // แยกข้อความเป็นตัวอักษร
-        text.split("").forEach((char, index) => {
-            const span = document.createElement("span");
-            span.textContent = char;
-            span.className = "animated-char";
-            textElement.appendChild(span);
-        // เพิ่มคลาส visible ทีละตัวด้วย delay
-            setTimeout(() => {
-                span.classList.add("visible");
-            }, index * 100); // ปรับ delay ตามลำดับ
-        });
-    </script>
-    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#profile">แนะนำตัว</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">ผลงาน</a></li>
+            <li><a href="#education">การศึกษา</a></li>
+            <li><a href="#activities">กิจกรรม</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="profile" class="card">
+            <h2>1. ส่วนแนะนำตัว (Introduction / Profile)</h2>
+            <p><strong>จุดประสงค์:</strong> เพื่อให้คนอื่นรู้จักเรามากขึ้น</p>
+            <ul>
+                <li><strong>ชื่อ-นามสกุล:</strong> [ใส่ชื่อ-นามสกุลของคุณ] (ภาษาไทย และ อังกฤษ)</li>
+                <li><strong>รูปโปรไฟล์:</strong> (ใส่แท็ก <img> เพื่อแสดงรูป) <br>
+                    </li>
+                <li><strong>คณะ / มหาวิทยาลัย / สาขา:</strong> [ใส่ข้อมูลของคุณ]</li>
+                <li><strong>ปีการศึกษา หรือ สถานะ:</strong> เช่น "นักศึกษาปีที่ 3"</li>
+                <li><strong>ความสนใจเฉพาะทาง:</strong> AI, Web Dev, Cybersecurity, Data Science</li>
+                
+                <li><strong>เป้าหมายในอนาคต (Career Interest):</strong> [อธิบายเป้าหมายของคุณ]</li>
+            </ul>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>2. ทักษะ (Skills)</h2>
+            <p><strong>จุดประสงค์:</strong> ทำให้อาจารย์หรือผู้ที่สนใจเห็นว่าเราทำอะไรได้บ้าง</p>
+            
+            <h3>Programming:</h3>
+            <ul>
+                <li>Python, Java, HTML/CSS, JavaScript</li>
+            </ul>
+            
+            <h3>AI & Data:</h3>
+            <ul>
+                <li>TensorFlow, scikit-learn, Power BI, SQL</li>
+            </ul>
+
+            <h3>Tools:</h3>
+            <ul>
+                <li>Git, VS Code, Figma, Google Colab</li>
+            </ul>
+
+            <h3>Soft Skills:</h3>
+            <ul>
+                <li>การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="card">
+            <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
+            <p><strong>จุดประสงค์:</strong> แสดงสิ่งที่เคยทำจริง ทั้งในรายวิชาและนอกห้องเรียน</p>
+            
+            <div class="project-item">
+                <h4>[ชื่อโปรเจกต์ 1] - Web Project</h4>
+                <p><strong>คำอธิบาย:</strong> เว็บไซต์ที่เคยพัฒนา... (อธิบายสั้นๆ)</p>
+                <p>
+                    <a href="[ลิงก์ GitHub Repo]">GitHub Repository</a> | 
+                    <a href="[ลิงก์ Demo ถ้ามี]">Demo เว็บไซต์</a>
+                </p>
+                </div>
+
+            <div class="project-item">
+                <h4>[ชื่อโปรเจกต์ 2] - AI/Data Project</h4>
+                <p><strong>คำอธิบาย:</strong> AI ทำนาย... / Dashboard วิเคราะห์ข้อมูล...</p>
+                <p>
+                    <a href="[ลิงก์ GitHub Repo]">GitHub Repository</a>
+                </p>
+                 </div>
+        </section>
+
+        <section id="education" class="card">
+            <h2>4. การศึกษา (Education)</h2>
+            <p>
+                <strong>[ชื่อปริญญา เช่น วิทยาศาสตรบัณฑิต]</strong><br>
+                สาขาวิชา [ชื่อสาขา] (เช่น วิทยาการคอมพิวเตอร์)<br>
+                คณะ [ชื่อคณะ]<br>
+                มหาวิทยาลัย [ชื่อมหาวิทยาลัย]<br>
+                (ปีที่เข้าศึกษา - ปัจจุบัน หรือ ปีที่จบ)
+            </p>
+        </section>
+
+        <section id="activities" class="card">
+            <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+            <p><strong>จุดประสงค์:</strong> เพื่อแสดงความสามารถรอบด้าน</p>
+            <ul>
+                <li>เข้าร่วมอบรม "AI for Beginners by Microsoft" (ปี 202X)</li>
+                <li>เข้าร่วมแข่งขัน UDRU Hackathon 2025 (ปี 202X)</li>
+                <li>ได้รับรางวัลชมเชยโครงงานด้าน IoT (ปี 202X)</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>6. ติดต่อ (Contact)</h2>
+            <p>ช่องทางการติดต่อสำหรับผู้ที่สนใจ</p>
+            <ul>
+                <li><strong>Email:</strong> [your.email@gmail.com]</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/[your_username]">github.com/[your_username]</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/[your_profile]">LinkedIn Profile</a></li>
+                <li><strong>Portfolio (ถ้ามีเว็บอื่น):</strong> <a href="[your.portfolio.com]">your.portfolio.com</a></li>
+            </ul>
+        </section>
+
+    </main> <footer>
+        <p>&copy; 2025 [ชื่อ-นามสกุลของคุณ]</p>
+    </footer>
 
 </body>
 </html>
