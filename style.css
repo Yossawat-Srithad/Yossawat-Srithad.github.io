@@ -175,9 +175,7 @@ footer {
 .profile-img {
     width: 150px;/* ลองที่ 150px (ถ้าเล็กไปก็เพิ่ม เช่น 180px) */
     height: 200px; /* กำหนดความสูงให้เท่าความกว้าง */
-    
     object-fit: cover; /* (สำคัญมาก) กันรูปสัดส่วนเพี้ยน */
-    
     border-radius: 30%; 
     display: block; 
     margin: 1rem auto; 
